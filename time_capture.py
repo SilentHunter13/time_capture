@@ -53,6 +53,7 @@ def update(path, now):
     # calculate presence
     presence = get_presence(stash['work'], stash['breaks'])
     presence_str = get_hour_minute_str(presence)
+    print('Beginn: {: >10}'.format(stash['work']['start'].strftime('%H:%M')))
     print('Anwesenheit: {0: >5s} h'.format(presence_str))
 
     print_target_times(stash)
